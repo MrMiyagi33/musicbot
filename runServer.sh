@@ -5,8 +5,7 @@ echo "bot code: "$botCode
 userID="$2"
 echo "user id: "$userID
 
-
-sed -i -e "s/\(^token = \).*/\1$botCode/" \
--e "s/\(^owner = \).*/\1$userID/" config.txt
+sed -i "s/BOT_TOKEN_HERE/$botCode/g" config.txt
+sed -i "s/OWNER_ID/$userID/g" config.txt
 
 java -Dnogui=true -jar JMusicBot.jar
