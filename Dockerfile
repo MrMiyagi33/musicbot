@@ -6,12 +6,13 @@ VOLUME [ "/musicbot" ]
 
 WORKDIR /musicbot
 
-ENV UID = 1000
-ENV GID = 1000
+ENV UID=1000
+ENV GID=1000
 
 RUN apt-get update && apt-get install -y \
     openjdk-11-jdk \
     wget \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 RUN wget -O JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/0.4.3/JMusicBot-0.4.3.jar \
