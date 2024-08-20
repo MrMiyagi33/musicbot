@@ -8,6 +8,8 @@ WORKDIR /musicbot
 
 ENV UID=1000
 ENV GID=1000
+ENV BOTCODE=''
+ENV USERID=''
 
 RUN apt-get update && apt-get install -y \
     openjdk-11-jdk \
@@ -20,4 +22,6 @@ RUN wget -O JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/
 
 USER ${UID}:${GID}
 
-CMD ["java", "-Dnogui=true", "-jar", "JMusicBot.jar"]
+RUN chmod +rw config.txt
+
+ENTRYPOINT sh runServer.sh "$BOTCODE" "$USERID"
