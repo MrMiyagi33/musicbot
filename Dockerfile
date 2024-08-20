@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN wget -O JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/0.4.3/JMusicBot-0.4.3.jar \
     && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/config.txt \
-    && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/runServer.sh
+    && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/runServer.sh \
+    && mkdir Playlists
 
 ENTRYPOINT sh runServer.sh "$BOTCODE" "$USERID"
