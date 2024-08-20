@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN wget -O JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/0.4.3/JMusicBot-0.4.3.jar \
-    && wget https://github.com/MrMiyagi33/musicbot/raw/main/config.txt \
-    && wget https://github.com/MrMiyagi33/musicbot/raw/main/runServer.sh
+    && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/config.txt \
+    && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/runServer.sh
 
 USER ${UID}:${GID}
 
