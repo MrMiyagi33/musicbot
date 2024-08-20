@@ -10,7 +10,7 @@ ENV UID = 1000
 ENV GID = 1000
 
 RUN apt-get update && apt-get install -y \
-    openjdk11 \
+    openjdk-11-jdk \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
