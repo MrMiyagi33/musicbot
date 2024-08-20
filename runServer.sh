@@ -1,9 +1,8 @@
 #!/bin/bash
 
-wget -O JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/0.4.3/JMusicBot-0.4.3.jar \
-    && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/config.txt \
-    && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/runServer.sh \
-    && chown ${UID}:${GUID} config.txt
+wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/config.txt
+
+wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/runServer.sh
 
 botCode="$1"
 echo "bot code: "$botCode
