@@ -1,7 +1,5 @@
 #!/bin/bash
 
-wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/config.txt
-
 botCode="$1"
 echo "bot code: "$botCode
 userID="$2"
