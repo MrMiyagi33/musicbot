@@ -2,8 +2,6 @@
 
 wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/config.txt
 
-wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/runServer.sh
-
 botCode="$1"
 echo "bot code: "$botCode
 userID="$2"
