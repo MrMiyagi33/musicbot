@@ -12,7 +12,7 @@ ENV BOTCODE=''
 ENV USERID=''
 
 RUN apt-get update && apt-get install -y \
-    openjdk-11-jdk \
+    openjdk-11-jre-headless  \
     wget \
     vim \
     && rm -rf /var/lib/apt/lists/*
