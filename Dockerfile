@@ -8,6 +8,7 @@ WORKDIR /musicbot
 
 ENV BOTCODE=''
 ENV USERID=''
+ENV PREFIX='?'
 
 RUN apt-get update && apt-get install -y \
     openjdk-11-jre-headless  \
@@ -20,4 +21,4 @@ RUN wget -O JMusicBot.jar https://github.com/jagrosh/MusicBot/releases/download/
     && wget https://raw.githubusercontent.com/MrMiyagi33/musicbot/main/runServer.sh \
     && mkdir Playlists
 
-ENTRYPOINT sh runServer.sh "$BOTCODE" "$USERID"
+ENTRYPOINT sh runServer.sh "$BOTCODE" "$USERID" "$PREFIX"
