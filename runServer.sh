@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod u+rwx config.txt
+
 botCode="$1"
 echo "bot code: "$botCode
 userID="$2"
