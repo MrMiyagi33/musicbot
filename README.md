@@ -3,7 +3,7 @@ A simple docker container for JMusic Bot.
 Download the docker file here or image on docker hub.
 
 To run via docker compose, see example below:
-'''
+ ```
 services:
   bedrock:
     container_name: musicbot
@@ -16,4 +16,4 @@ services:
     restart: always
 volumes:
   music_bot:
-'''
+ ```
